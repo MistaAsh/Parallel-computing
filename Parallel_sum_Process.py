@@ -8,6 +8,7 @@ t = int(input('Enter the number of testcases: '))
 
 for _ in range(t):
     n = int(input('\nEnter the number of elements: '))
+    
     print('Enter array: ', end='')
     arr = list(map(int, input().split()))
 

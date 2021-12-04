@@ -1,13 +1,10 @@
 import multiprocessing as mp
-
 from collections import defaultdict
-from collections import deque
 
 graph = defaultdict(list)
 visited = []
 
 distance = []
-q = deque()
 
 def addNeighbours(parent):
     visited[parent] = True
@@ -37,7 +34,7 @@ def parallelBFS(level):
 
 
 if __name__ == '__main__':
-    v, e = map(int, input().split())    #n = number of edges, e = number of edges
+    v, e = map(int, input().split())    #v = number of edges, e = number of edges
     
     visited = mp.Array('i', v)
     distance = mp.Array('i', v)
@@ -49,4 +46,4 @@ if __name__ == '__main__':
     parallelBFS([0])
     
     for i in range(len(distance)):
-        print(f'The node {i} is at least {distance[i]} units away from the source')
+        print(f'Shortest distance between 0 and {i} = {distance[i]}')
