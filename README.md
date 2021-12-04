@@ -23,3 +23,5 @@ The sums of these individual sub-arrays were then added to a `multiprocessing.Va
 In the bfs method, we first create a dictionary of lists with each key in the dictionary representing a node and the corresponding list an array of it's immediate neighbours. As we traverse to each of it's neighbours, we mark the node as visited and evaluate it's distance from the source as the `distance[prev] + 1`.
 
 **With multiprocessing:** to include multiprocessing, we will be using the `multiprocessing.Pool` class which helps to create and manage multiple processes at the same time. Here, we use the same basic algorithm of BFS, but with each level of the graph we traverse, we call a seperate pool to calculate the distances of its immediate neighbours. 
+
+To make sure the data we update the individual changes to the *visited* and *distance* arrays, we use the `multiprocessing.Array` class which, similar to 'Value', acts as a wrapper around the different pools, communicating between every runiing pool
