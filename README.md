@@ -26,4 +26,4 @@ In the bfs method, we first create a dictionary of lists with each key in the di
 
 To make sure the data we update the individual changes to the *visited* and *distance* arrays, we use the `multiprocessing.Array` class which, similar to 'Value', acts as a wrapper around the different pools, communicating between every runiing pool
 
-(The code seems to be very system dependant. It works on various online compilers as well as Linux systems, but shows errors when run on selected Windows systems. I have tried to reach the root of the problem but haven't found anything of value yet.)
+(The code seems to be very system dependant. It works on various online compilers as well as Linux systems, but shows errors when run on selected Windows systems. I have tried to reach the root of the problem but haven't found anything of value yet. Will try to get to the bottom of this ASAP)
